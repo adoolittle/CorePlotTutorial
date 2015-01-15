@@ -12,15 +12,14 @@
 		3E7A9E1E1A68321D0039F91A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7A9E1D1A68321D0039F91A /* UIKit.framework */; };
 		3E7A9E241A68321D0039F91A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E7A9E221A68321D0039F91A /* InfoPlist.strings */; };
 		3E7A9E261A68321D0039F91A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7A9E251A68321D0039F91A /* main.m */; };
-		3E7A9E2A1A68321D0039F91A /* YALAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7A9E291A68321D0039F91A /* YALAppDelegate.m */; };
-		3E7A9E2D1A68321D0039F91A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E7A9E2B1A68321D0039F91A /* Main.storyboard */; };
-		3E7A9E301A68321D0039F91A /* YALViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7A9E2F1A68321D0039F91A /* YALViewController.m */; };
 		3E7A9E321A68321D0039F91A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E7A9E311A68321D0039F91A /* Images.xcassets */; };
 		3E7A9E391A68321D0039F91A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7A9E381A68321D0039F91A /* XCTest.framework */; };
 		3E7A9E3A1A68321D0039F91A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7A9E191A68321D0039F91A /* Foundation.framework */; };
 		3E7A9E3B1A68321D0039F91A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7A9E1D1A68321D0039F91A /* UIKit.framework */; };
 		3E7A9E431A68321D0039F91A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E7A9E411A68321D0039F91A /* InfoPlist.strings */; };
 		3E7A9E451A68321D0039F91A /* YALCorePlotBlogPostTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7A9E441A68321D0039F91A /* YALCorePlotBlogPostTests.m */; };
+		3E9F5A9A1A6832C8008196E1 /* YALAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9F5A911A6832C8008196E1 /* YALAppDelegate.m */; };
+		3E9F5A9B1A6832C8008196E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E9F5A971A6832C8008196E1 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,17 +41,15 @@
 		3E7A9E231A68321D0039F91A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3E7A9E251A68321D0039F91A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3E7A9E271A68321D0039F91A /* YALCorePlotBlogPost-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YALCorePlotBlogPost-Prefix.pch"; sourceTree = "<group>"; };
-		3E7A9E281A68321D0039F91A /* YALAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YALAppDelegate.h; sourceTree = "<group>"; };
-		3E7A9E291A68321D0039F91A /* YALAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YALAppDelegate.m; sourceTree = "<group>"; };
-		3E7A9E2C1A68321D0039F91A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3E7A9E2E1A68321D0039F91A /* YALViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YALViewController.h; sourceTree = "<group>"; };
-		3E7A9E2F1A68321D0039F91A /* YALViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YALViewController.m; sourceTree = "<group>"; };
 		3E7A9E311A68321D0039F91A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3E7A9E371A68321D0039F91A /* YALCorePlotBlogPostTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YALCorePlotBlogPostTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E7A9E381A68321D0039F91A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3E7A9E401A68321D0039F91A /* YALCorePlotBlogPostTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YALCorePlotBlogPostTests-Info.plist"; sourceTree = "<group>"; };
 		3E7A9E421A68321D0039F91A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3E7A9E441A68321D0039F91A /* YALCorePlotBlogPostTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YALCorePlotBlogPostTests.m; sourceTree = "<group>"; };
+		3E9F5A901A6832C8008196E1 /* YALAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YALAppDelegate.h; sourceTree = "<group>"; };
+		3E9F5A911A6832C8008196E1 /* YALAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YALAppDelegate.m; sourceTree = "<group>"; };
+		3E9F5A981A6832C8008196E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +109,13 @@
 		3E7A9E1F1A68321D0039F91A /* YALCorePlotBlogPost */ = {
 			isa = PBXGroup;
 			children = (
-				3E7A9E281A68321D0039F91A /* YALAppDelegate.h */,
-				3E7A9E291A68321D0039F91A /* YALAppDelegate.m */,
-				3E7A9E2B1A68321D0039F91A /* Main.storyboard */,
-				3E7A9E2E1A68321D0039F91A /* YALViewController.h */,
-				3E7A9E2F1A68321D0039F91A /* YALViewController.m */,
+				3E9F5A961A6832C8008196E1 /* Storyboard */,
+				3E9F5A8F1A6832C8008196E1 /* AppDelegate */,
+				3E9F5A991A6832C8008196E1 /* View */,
+				3E9F5A941A6832C8008196E1 /* Model */,
+				3E9F5A921A6832C8008196E1 /* Helpers */,
+				3E9F5A931A6832C8008196E1 /* Libs */,
+				3E9F5A951A6832C8008196E1 /* Resources */,
 				3E7A9E311A68321D0039F91A /* Images.xcassets */,
 				3E7A9E201A68321D0039F91A /* Supporting Files */,
 			);
@@ -150,6 +149,58 @@
 				3E7A9E411A68321D0039F91A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3E9F5A8F1A6832C8008196E1 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				3E9F5A901A6832C8008196E1 /* YALAppDelegate.h */,
+				3E9F5A911A6832C8008196E1 /* YALAppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		3E9F5A921A6832C8008196E1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3E9F5A931A6832C8008196E1 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		3E9F5A941A6832C8008196E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3E9F5A951A6832C8008196E1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3E9F5A961A6832C8008196E1 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				3E9F5A971A6832C8008196E1 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		3E9F5A991A6832C8008196E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +282,7 @@
 			files = (
 				3E7A9E321A68321D0039F91A /* Images.xcassets in Resources */,
 				3E7A9E241A68321D0039F91A /* InfoPlist.strings in Resources */,
-				3E7A9E2D1A68321D0039F91A /* Main.storyboard in Resources */,
+				3E9F5A9B1A6832C8008196E1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,8 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E7A9E261A68321D0039F91A /* main.m in Sources */,
-				3E7A9E2A1A68321D0039F91A /* YALAppDelegate.m in Sources */,
-				3E7A9E301A68321D0039F91A /* YALViewController.m in Sources */,
+				3E9F5A9A1A6832C8008196E1 /* YALAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,20 +333,20 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		3E7A9E2B1A68321D0039F91A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3E7A9E2C1A68321D0039F91A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3E7A9E411A68321D0039F91A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3E7A9E421A68321D0039F91A /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3E9F5A971A6832C8008196E1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E9F5A981A6832C8008196E1 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -457,6 +507,7 @@
 				3E7A9E4A1A68321D0039F91A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3E7A9E4B1A68321D0039F91A /* Build configuration list for PBXNativeTarget "YALCorePlotBlogPostTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +516,7 @@
 				3E7A9E4D1A68321D0039F91A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
