@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8E79CCE3-45A3-4920-9B7B-E37BC92C9BDC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>YALCorePlotBlogPost</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>71DF25CA-21E3-45F4-B873-ADA474B076CA</key>
+		<string>ssh://git.yalantis.com/eugene.goloboyar/yalcoreplotblogpost.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>YALCorePlotBlogPost/YALCorePlotBlogPost.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>71DF25CA-21E3-45F4-B873-ADA474B076CA</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://git.yalantis.com/eugene.goloboyar/yalcoreplotblogpost.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>71DF25CA-21E3-45F4-B873-ADA474B076CA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>71DF25CA-21E3-45F4-B873-ADA474B076CA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>yalcoreplotblogpost</string>
+		</dict>
+	</array>
+</dict>
+</plist>
