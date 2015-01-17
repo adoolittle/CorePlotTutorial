@@ -17,6 +17,8 @@ static NSString *const YALFirstRunKey = @"kYALFirstRunKey";
 
 + (void)imortDefaultData {
     if ([[NSUserDefaults standardUserDefaults] objectForKey:YALFirstRunKey] == nil) {
+        [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:YALFirstRunKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
         NSArray *array = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"YALExercises" ofType:@"plist"]];
         NSManagedObjectContext *ctx = [NSManagedObjectContext MR_contextForCurrentThread];
         [YALExercise MR_importFromArray:array inContext:ctx];
