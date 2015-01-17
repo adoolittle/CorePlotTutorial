@@ -11,13 +11,17 @@
 //model
 #import "YALExercise.h"
 
+static NSString *const YALFirstRunKey = @"kYALFirstRunKey";
+
 @implementation YALDefaulltDatamporter
 
 + (void)imortDefaultData {
-    NSArray *array = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"YALExercises" ofType:@"plist"]];
-    NSManagedObjectContext *ctx = [NSManagedObjectContext MR_contextForCurrentThread];
-    [YALExercise MR_importFromArray:array inContext:ctx];
-    [ctx MR_saveToPersistentStoreAndWait];
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:YALFirstRunKey] == nil) {
+        NSArray *array = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"YALExercises" ofType:@"plist"]];
+        NSManagedObjectContext *ctx = [NSManagedObjectContext MR_contextForCurrentThread];
+        [YALExercise MR_importFromArray:array inContext:ctx];
+        [ctx MR_saveToPersistentStoreAndWait];
+    }
 }
 
 @end

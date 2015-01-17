@@ -30,6 +30,9 @@
     
     return YES;
 }
-							
 
+- (void)applicationWillTerminate:(UIApplication *)application {
+    [MagicalRecord cleanUp];
+}
+							
 @end
