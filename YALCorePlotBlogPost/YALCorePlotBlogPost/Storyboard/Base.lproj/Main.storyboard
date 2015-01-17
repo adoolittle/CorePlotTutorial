@@ -1,26 +1,209 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Tab Bar Controller-->
+        <scene sceneID="Ynm-Kx-gaJ">
             <objects>
-                <viewController id="vXZ-lx-hvc" sceneMemberID="viewController">
+                <tabBarController id="P13-DZ-qHi" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Tzl-ja-Mes">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="7Hx-E4-uvQ" kind="relationship" relationship="viewControllers" id="WvD-N9-XE3"/>
+                        <segue destination="Fgd-ib-0bn" kind="relationship" relationship="viewControllers" id="gCW-Yg-DkJ"/>
+                        <segue destination="jup-VH-WRD" kind="relationship" relationship="viewControllers" id="aOZ-Kh-RPm"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Crl-1D-dIE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1022" y="46"/>
+        </scene>
+        <!--Bar Chart-->
+        <scene sceneID="rSq-5J-g2K">
+            <objects>
+                <viewController id="7Hx-E4-uvQ" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="iyK-JR-WRI"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Cn-ea-mpz"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="dwN-Wb-jd9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Q8-Hd-amm" customClass="CPTGraphHostingView">
+                                <rect key="frame" x="16" y="50" width="288" height="318"/>
+                                <connections>
+                                    <segue destination="lho-ft-DHM" kind="embed" id="mQX-9F-84o"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8Q8-Hd-amm" firstAttribute="leading" secondItem="dwN-Wb-jd9" secondAttribute="leadingMargin" id="PlY-Hy-if8"/>
+                            <constraint firstItem="9Cn-ea-mpz" firstAttribute="top" secondItem="8Q8-Hd-amm" secondAttribute="bottom" constant="151" id="QNo-A2-NpX"/>
+                            <constraint firstItem="8Q8-Hd-amm" firstAttribute="top" secondItem="iyK-JR-WRI" secondAttribute="bottom" constant="30" id="o55-aX-bWO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8Q8-Hd-amm" secondAttribute="trailing" id="qqf-Td-kl0"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Bar Chart" id="NL1-cu-X2c"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ngy-ew-T9G" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-491" y="-587"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Fgv-Rp-Twp">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="lho-ft-DHM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OyK-O6-HTi"/>
+                        <viewControllerLayoutGuide type="bottom" id="CMs-Fz-zoO"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="F0t-3h-XzO" customClass="YALBarChartView">
+                        <rect key="frame" x="0.0" y="0.0" width="288" height="318"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Cim-F2-PlK" id="Lfy-rW-KB1"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="mNt-cm-KCv"/>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="view" destination="F0t-3h-XzO" id="D5y-SV-yRd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Sz-WE-xDH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="Cim-F2-PlK" customClass="YALBarChartViewDataSource"/>
+            </objects>
+            <point key="canvasLocation" x="-104" y="-712"/>
+        </scene>
+        <!--Stacked Bar Chart-->
+        <scene sceneID="GfK-i0-YgN">
+            <objects>
+                <viewController id="jup-VH-WRD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Crl-qz-iUW"/>
+                        <viewControllerLayoutGuide type="bottom" id="GaT-QL-Bwb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2fe-g0-xpK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0O2-DU-wtQ" customClass="CPTGraphHostingView">
+                                <rect key="frame" x="16" y="30" width="288" height="289"/>
+                                <connections>
+                                    <segue destination="nX5-9B-xsx" kind="embed" id="7t7-LL-Dnq"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="0O2-DU-wtQ" secondAttribute="trailing" id="6yj-5j-0Fj"/>
+                            <constraint firstItem="GaT-QL-Bwb" firstAttribute="top" secondItem="0O2-DU-wtQ" secondAttribute="bottom" constant="200" id="7fO-hd-h6o"/>
+                            <constraint firstItem="0O2-DU-wtQ" firstAttribute="top" secondItem="2fe-g0-xpK" secondAttribute="topMargin" constant="30" id="Jt5-D6-wZO"/>
+                            <constraint firstItem="0O2-DU-wtQ" firstAttribute="leading" secondItem="2fe-g0-xpK" secondAttribute="leadingMargin" id="Twh-C4-vWs"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Stacked Bar Chart" id="yuG-ii-KcW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jWB-Ul-D8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-491" y="46"/>
+        </scene>
+        <!--Pie Chart-->
+        <scene sceneID="TOX-gg-hf8">
+            <objects>
+                <viewController id="Fgd-ib-0bn" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0a3-8Z-OF3"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Nh-oX-RDf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wLQ-cd-49N">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HbX-vX-sy4" customClass="CPTGraphHostingView">
+                                <rect key="frame" x="16" y="30" width="288" height="397"/>
+                                <connections>
+                                    <segue destination="Vkc-b0-4PJ" kind="embed" id="OVT-M6-D6X"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HbX-vX-sy4" firstAttribute="top" secondItem="wLQ-cd-49N" secondAttribute="topMargin" constant="30" id="8D1-T8-K41"/>
+                            <constraint firstItem="8Nh-oX-RDf" firstAttribute="top" secondItem="HbX-vX-sy4" secondAttribute="bottom" constant="92" id="SP1-7z-mUT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HbX-vX-sy4" secondAttribute="trailing" id="Tkb-ZD-d22"/>
+                            <constraint firstItem="HbX-vX-sy4" firstAttribute="leading" secondItem="wLQ-cd-49N" secondAttribute="leadingMargin" id="eD8-A0-9gb"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Pie Chart" id="ghG-tj-dqx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fbt-xq-JW4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-491" y="748"/>
+        </scene>
+        <!--Bar-->
+        <scene sceneID="0wj-HF-QqG">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Vkc-b0-4PJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mtu-hE-syH"/>
+                        <viewControllerLayoutGuide type="bottom" id="rvg-98-aTD"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ywF-RD-DIr" customClass="YALPieChartView">
+                        <rect key="frame" x="0.0" y="0.0" width="288" height="397"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="thy-6i-DbX" id="xCh-VQ-6vI"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Bar" id="53C-4x-CWj"/>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="view" destination="ywF-RD-DIr" id="gIi-bF-BsI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CmE-yM-dKf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="thy-6i-DbX" customClass="YALPieChartViewDataSource"/>
+            </objects>
+            <point key="canvasLocation" x="-109" y="662.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="v9O-yD-VTl">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="nX5-9B-xsx" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m3X-ds-ATp"/>
+                        <viewControllerLayoutGuide type="bottom" id="kSt-2E-ABM"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="bgW-XR-Oaf" customClass="YALStackedBarChartView">
+                        <rect key="frame" x="0.0" y="0.0" width="288" height="289"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="0X0-SM-ZCu" id="wKR-GL-rDW"/>
+                        </connections>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="view" destination="bgW-XR-Oaf" id="kdg-jV-AZd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wnv-dw-g7x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="0X0-SM-ZCu" customClass="YALStackedBarChartDataSource"/>
+            </objects>
+            <point key="canvasLocation" x="-77" y="-93.5"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

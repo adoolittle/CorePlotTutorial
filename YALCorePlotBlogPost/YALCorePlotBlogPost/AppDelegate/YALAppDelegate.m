@@ -8,6 +8,9 @@
 
 #import "YALAppDelegate.h"
 
+//helpers
+#import "YALDefaulltDatamporter.h"
+
 @implementation YALAppDelegate
 
 #pragma mark - Initialization
@@ -23,6 +26,8 @@
 #pragma mark - Private
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [YALDefaulltDatamporter imortDefaultData];
+    
     return YES;
 }
 							
