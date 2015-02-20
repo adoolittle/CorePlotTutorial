@@ -149,17 +149,6 @@ static CGFloat const YALMinimalDegreesToDisplay = 3.f;
     return [pieProtocol sectorSize];
 }
 
-- (CPTLayer *)dataLabelForPlot:(CPTPlot *)plot recordIndex:(NSUInteger)idx {
-    
-    id <YALPieChartProtocol> pieProtocol = [self.dataSource pieChartView:self sectorAtIndex:idx];
-    static CPTMutableTextStyle *labelText = nil;
-    if (!labelText) {
-        labelText= [[CPTMutableTextStyle alloc] init];
-        labelText.color = [CPTColor grayColor];
-    }
-    return [[CPTTextLayer alloc] initWithText:[pieProtocol sectorLegendString] style:labelText];
-}
-
 #pragma mark - CPTPieChartDelegate
 
 - (CPTFill *)sliceFillForPieChart:(CPTPieChart *)pieChart recordIndex:(NSUInteger)index {
