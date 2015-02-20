@@ -8,17 +8,17 @@
 
 #import "YALStackedBarChartView.h"
 
-static CGFloat const YAAxisXLabelTextFontSize = 12.0f;
-static CGFloat const YALineWidth = 1.0f;
-static CGFloat const YAMultiplierForMimimalBarValue = 0.03f;
-static CGFloat const kDefaultPaddingTop = 10.0f;
-static CGFloat const kDefaultPaddingRight = 10.0f;
-static CGFloat const kDefaultPaddingBottom = 20.0f;
-static CGFloat const kDefaultPaddingLeft = 40.0f;
-static CGFloat const kDefaultSectionWidth = 20.0f;
-static CGFloat const kDefaultXAxeLeftOffset = 5.0f;
-static CGFloat const kDefaultXAxeRightOffset = 5.0f;
-static CGFloat const kDefaultDistanceBetweenBars = 10.0f;
+static CGFloat const YALAxisXLabelTextFontSize = 12.0f;
+static CGFloat const YALLineWidth = 1.0f;
+static CGFloat const YALMultiplierForMimimalBarValue = 0.03f;
+static CGFloat const YALDefaultPaddingTop = 10.0f;
+static CGFloat const YALDefaultPaddingRight = 10.0f;
+static CGFloat const YALDefaultPaddingBottom = 20.0f;
+static CGFloat const YALDefaultPaddingLeft = 40.0f;
+static CGFloat const YALDefaultSectionWidth = 20.0f;
+static CGFloat const YALDefaultXAxeLeftOffset = 5.0f;
+static CGFloat const YALDefaultXAxeRightOffset = 5.0f;
+static CGFloat const YALDefaultDistanceBetweenBars = 10.0f;
 
 @interface YALStackedBarChartView () <CPTBarPlotDataSource, CPTBarPlotDelegate>
 
@@ -65,19 +65,19 @@ static CGFloat const kDefaultDistanceBetweenBars = 10.0f;
     borderLineStyle.lineColor = [CPTColor whiteColor];
     borderLineStyle.lineWidth = 2.0f;
     self.graph.plotAreaFrame.borderLineStyle = borderLineStyle;
-    self.graph.plotAreaFrame.paddingTop = kDefaultPaddingTop;
-    self.graph.plotAreaFrame.paddingRight = kDefaultPaddingRight;
-    self.graph.plotAreaFrame.paddingBottom = kDefaultPaddingBottom;
-    self.graph.plotAreaFrame.paddingLeft = kDefaultPaddingLeft;
+    self.graph.plotAreaFrame.paddingTop = YALDefaultPaddingTop;
+    self.graph.plotAreaFrame.paddingRight = YALDefaultPaddingRight;
+    self.graph.plotAreaFrame.paddingBottom = YALDefaultPaddingBottom;
+    self.graph.plotAreaFrame.paddingLeft = YALDefaultPaddingLeft;
     
     //set axes' line styles and interval ticks
     CPTMutableLineStyle *gridLineStyle = [CPTMutableLineStyle lineStyle];
-    gridLineStyle.lineWidth = YALineWidth;
+    gridLineStyle.lineWidth = YALLineWidth;
     
     //setup style for label for Y axis
     CPTMutableTextStyle *textStyle = [CPTMutableTextStyle textStyle];
     textStyle.fontName = @"Helvetica";
-    textStyle.fontSize = YAAxisXLabelTextFontSize;
+    textStyle.fontSize = YALAxisXLabelTextFontSize;
    
     
     //Axes
@@ -106,10 +106,10 @@ static CGFloat const kDefaultDistanceBetweenBars = 10.0f;
     y.minorTicksPerInterval = 5;
     y.labelFormatter = formatter;
     
-    _distanceBetweenBars = kDefaultDistanceBetweenBars;
-    _sectionWidth = kDefaultSectionWidth;
-    _offsetFromLeft = kDefaultXAxeLeftOffset;
-    _offsetFromRight = kDefaultXAxeRightOffset;
+    _distanceBetweenBars = YALDefaultDistanceBetweenBars;
+    _sectionWidth = YALDefaultSectionWidth;
+    _offsetFromLeft = YALDefaultXAxeLeftOffset;
+    _offsetFromRight = YALDefaultXAxeRightOffset;
 }
 
 #pragma mark - Public
@@ -165,7 +165,7 @@ static CGFloat const kDefaultDistanceBetweenBars = 10.0f;
         maxHeight = fmaxf(maxHeight, sectionHeight);
     }
     
-    self.defaultMinimalHegiht = maxHeight * YAMultiplierForMimimalBarValue;
+    self.defaultMinimalHegiht = maxHeight * YALMultiplierForMimimalBarValue;
     
     // TODO: Refactor dual loops
     maxHeight = 0.f;

@@ -8,21 +8,21 @@
 
 #import "YALBarChartView.h"
 
-CGFloat const YAAreaPaddingTop = 0.0f;
-CGFloat const YAAreaPaddingRight = 10.0f;
-CGFloat const YAAreaPaddingLeft = 80.0f;
-CGFloat const YAAreaPaddingBottom = 120.0f;
-CGFloat const YAAxisXLabelTextFontSize = 10.0f;
-CGFloat const YAAxisXLabelOffset = 0.0f;
-CGFloat const YABarOffset = 5.0f;
-CGFloat const YABarWidth = 5.0f;
-CGFloat const YALineWidth = 1.0f;
-CGFloat const YAMajorTickLength = 5.0f;
-CGFloat const YAMinorTickLength = 5.0f;
-CGFloat const YADefaultTickInterval = 1.0f;
-CGFloat const YABorderLineStyleWidth = .5f;
-CGFloat const YAMultiplierForMimimalBarValue = 0.015f;
-NSUInteger const YAMultiplierToAdjustAxisYSize = 10;
+CGFloat const YALAreaPaddingTop = 0.0f;
+CGFloat const YALAreaPaddingRight = 10.0f;
+CGFloat const YALAreaPaddingLeft = 80.0f;
+CGFloat const YALAreaPaddingBottom = 120.0f;
+CGFloat const YALAxisXLabelTextFontSize = 10.0f;
+CGFloat const YALAxisXLabelOffset = 0.0f;
+CGFloat const YALBarOffset = 5.0f;
+CGFloat const YALBarWidth = 5.0f;
+CGFloat const YALLineWidth = 1.0f;
+CGFloat const YALMajorTickLength = 5.0f;
+CGFloat const YALMinorTickLength = 5.0f;
+CGFloat const YALDefaultTickInterval = 1.0f;
+CGFloat const YALBorderLineStyleWidth = .5f;
+CGFloat const YALMultiplierForMimimalBarValue = 0.015f;
+NSUInteger const YALMultiplierToAdjustAxisYSize = 10;
 
 @interface YALBarChartView () <CPTBarPlotDataSource, CPTBarPlotDelegate>
 
@@ -67,10 +67,10 @@ NSUInteger const YAMultiplierToAdjustAxisYSize = 10;
     [self.graph setValue:@(0.f) forKey:@"paddingBottom"];
     
     //set graph padding and theme
-    self.graph.plotAreaFrame.paddingTop = YAAreaPaddingTop;
-    self.graph.plotAreaFrame.paddingRight = YAAreaPaddingRight;
-    self.graph.plotAreaFrame.paddingBottom = YAAreaPaddingBottom;
-    self.graph.plotAreaFrame.paddingLeft = YAAreaPaddingLeft;
+    self.graph.plotAreaFrame.paddingTop = YALAreaPaddingTop;
+    self.graph.plotAreaFrame.paddingRight = YALAreaPaddingRight;
+    self.graph.plotAreaFrame.paddingBottom = YALAreaPaddingBottom;
+    self.graph.plotAreaFrame.paddingLeft = YALAreaPaddingLeft;
     self.graph.plotAreaFrame.plotArea.fill = [CPTFill fillWithColor:[CPTColor clearColor]];
     
     //setup axis
@@ -78,20 +78,20 @@ NSUInteger const YAMultiplierToAdjustAxisYSize = 10;
     //setup style for label for X axis
     CPTMutableTextStyle *textStyle = [CPTMutableTextStyle textStyle];
     textStyle.fontName = @"Helvetica";
-    textStyle.fontSize = YAAxisXLabelTextFontSize;
+    textStyle.fontSize = YALAxisXLabelTextFontSize;
     textStyle.color = [CPTColor colorWithCGColor:[UIColor blueColor].CGColor];
     
     axisSet.yAxis.labelingPolicy = CPTAxisLabelingPolicyNone;
     
     axisSet.xAxis.labelTextStyle = textStyle;
-    axisSet.xAxis.labelOffset = YAAxisXLabelOffset;
+    axisSet.xAxis.labelOffset = YALAxisXLabelOffset;
     
     [axisSet.xAxis setLabelingPolicy:CPTAxisLabelingPolicyAutomatic];
     
     //set axes' line styles and interval ticks
     CPTMutableLineStyle *lineStyle = [CPTMutableLineStyle lineStyle];
     lineStyle.lineColor = [CPTColor colorWithCGColor:[UIColor grayColor].CGColor];
-    lineStyle.lineWidth = YALineWidth;
+    lineStyle.lineWidth = YALLineWidth;
     
     //setup format for x labels axes
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
@@ -106,16 +106,16 @@ NSUInteger const YAMultiplierToAdjustAxisYSize = 10;
     
     // X Major Tick
     axisSet.xAxis.majorTickLineStyle = lineStyle;
-    axisSet.xAxis.majorIntervalLength = CPTDecimalFromFloat(YADefaultTickInterval);
-    axisSet.xAxis.majorTickLength = YAMajorTickLength;
+    axisSet.xAxis.majorIntervalLength = CPTDecimalFromFloat(YALDefaultTickInterval);
+    axisSet.xAxis.majorTickLength = YALMajorTickLength;
     
     axisSet.xAxis.minorTickLineStyle = lineStyle;
-    axisSet.xAxis.minorTickLength = YAMinorTickLength;
+    axisSet.xAxis.minorTickLength = YALMinorTickLength;
     
     axisSet.xAxis.majorGridLineStyle = lineStyle;
     
-    _barWidth = YABarWidth;
-    _distanceBetweenBars  = YABarOffset;
+    _barWidth = YALBarWidth;
+    _distanceBetweenBars  = YALBarOffset;
 }
 
 
@@ -135,13 +135,13 @@ NSUInteger const YAMultiplierToAdjustAxisYSize = 10;
     // Remove bar outlines
     CPTMutableLineStyle *borderLineStyle = [CPTMutableLineStyle lineStyle];
     borderLineStyle.lineColor = [CPTColor whiteColor];
-    borderLineStyle.lineWidth = YABorderLineStyleWidth;
+    borderLineStyle.lineWidth = YALBorderLineStyleWidth;
     plot.lineStyle = borderLineStyle;
     [self.graph addPlot:plot];
     
     CPTMutableTextStyle *textStyle = [CPTMutableTextStyle textStyle];
     textStyle.fontName = @"Arial";
-    textStyle.fontSize = YAAxisXLabelTextFontSize;
+    textStyle.fontSize = YALAxisXLabelTextFontSize;
     NSMutableArray *labelsArray = [NSMutableArray array];
     
     //calculated maxWidth  for bar
@@ -156,12 +156,12 @@ NSUInteger const YAMultiplierToAdjustAxisYSize = 10;
     plotSpace.xRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromCGFloat(0.f)
                                                     length:CPTDecimalFromCGFloat(maxValue+1.f)];
     plotSpace.yRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromCGFloat(0.f)
-                                                    length:CPTDecimalFromInteger((numberOfPlots)*YAMultiplierToAdjustAxisYSize)];
+                                                    length:CPTDecimalFromInteger((numberOfPlots)*YALMultiplierToAdjustAxisYSize)];
     
     for (int i = 0; i < numberOfPlots; i++) {
         id <YALBarChartProtocol> barProtocol = [self.dataSource barChartView:self barAtIndex:i];
         CPTAxisLabel *label = [[CPTAxisLabel alloc] initWithText:[barProtocol barName] textStyle:textStyle];
-        [label setTickLocation:CPTDecimalFromInt((i*YAMultiplierToAdjustAxisYSize)+5)];
+        [label setTickLocation:CPTDecimalFromInt((i*YALMultiplierToAdjustAxisYSize)+5)];
         [labelsArray addObject:label];
     }
     
@@ -182,7 +182,7 @@ NSUInteger const YAMultiplierToAdjustAxisYSize = 10;
     
     
     //recalculated default minimalBarValue for to make all bars visible even if they depict small amouts of data
-    self.defaultMinimalBarValue = ((maxValue) * YAMultiplierForMimimalBarValue);
+    self.defaultMinimalBarValue = ((maxValue) * YALMultiplierForMimimalBarValue);
 
     //recalculated interval for axis
     if (maxValue == 0) {
@@ -207,7 +207,7 @@ NSUInteger const YAMultiplierToAdjustAxisYSize = 10;
     
     //for Y coordinate we return index of plot multupled by our constant
     if (fieldEnum == CPTBarPlotFieldBarLocation) {
-        return @(index*YAMultiplierToAdjustAxisYSize);
+        return @(index * YALMultiplierToAdjustAxisYSize);
         
     //for X coordninate we return value (width) of Plot or calculated default minimalValue
     } else if (fieldEnum == CPTBarPlotFieldBarTip) {

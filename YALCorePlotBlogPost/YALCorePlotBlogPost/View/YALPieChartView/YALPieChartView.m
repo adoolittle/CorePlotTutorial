@@ -8,14 +8,14 @@
 
 #import "YALPieChartView.h"
 
-static CGFloat const YAAreaPaddingTop = 0.0f;
-static CGFloat const YAAreaPaddingRight = 0.0f;
-static CGFloat const YAAreaPaddingLeft = 0.0f;
-static CGFloat const YAAreaPaddingBottom = 0.0f;
-static CGFloat const YAPieInnerRadius = 0.0f;
-static CGFloat const YAPieRadius = 70.0f;
-static CGFloat const YAPieBorderWidth = 1.0f;
-static CGFloat const YAStartDrawingPoint = M_PI/2.f;
+static CGFloat const YALAreaPaddingTop = 0.0f;
+static CGFloat const YALAreaPaddingRight = 0.0f;
+static CGFloat const YALAreaPaddingLeft = 0.0f;
+static CGFloat const YALAreaPaddingBottom = 0.0f;
+static CGFloat const YALPieInnerRadius = 0.0f;
+static CGFloat const YALPieRadius = 70.0f;
+static CGFloat const YALPieBorderWidth = 1.0f;
+static CGFloat const YALStartDrawingPoint = M_PI/2.f;
 static CGFloat const YALMinimalDegreesToDisplay = 3.f;
 
 @interface YALPieChartView () <CPTPieChartDataSource, CPTPieChartDelegate>
@@ -64,10 +64,10 @@ static CGFloat const YALMinimalDegreesToDisplay = 3.f;
     
     
     //set graph padding and theme
-    self.graph.plotAreaFrame.paddingTop = YAAreaPaddingTop;
-    self.graph.plotAreaFrame.paddingRight = YAAreaPaddingRight;
-    self.graph.plotAreaFrame.paddingBottom = YAAreaPaddingBottom;
-    self.graph.plotAreaFrame.paddingLeft = YAAreaPaddingLeft;
+    self.graph.plotAreaFrame.paddingTop = YALAreaPaddingTop;
+    self.graph.plotAreaFrame.paddingRight = YALAreaPaddingRight;
+    self.graph.plotAreaFrame.paddingBottom = YALAreaPaddingBottom;
+    self.graph.plotAreaFrame.paddingLeft = YALAreaPaddingLeft;
     self.graph.plotAreaFrame.plotArea.fill = [CPTFill fillWithColor:[CPTColor clearColor]];
     
     CPTXYAxisSet *axisSet = (CPTXYAxisSet *) self.graph.axisSet;
@@ -82,9 +82,9 @@ static CGFloat const YALMinimalDegreesToDisplay = 3.f;
     //disable axis for pie chart
     self.graph.axisSet = nil;
     
-    _pieInnerCornerRadius = YAPieInnerRadius;
-    _pieRadius = YAPieRadius;
-    _borderLineWidth = YAPieBorderWidth;
+    _pieInnerCornerRadius = YALPieInnerRadius;
+    _pieRadius = YALPieRadius;
+    _borderLineWidth = YALPieBorderWidth;
 }
 
 #pragma mark - Public
@@ -110,7 +110,7 @@ static CGFloat const YALMinimalDegreesToDisplay = 3.f;
         piePlot.pieRadius = _pieRadius;
         piePlot.pieInnerRadius = _pieInnerCornerRadius;
         piePlot.identifier      = @"Pie Chart 1";
-        piePlot.startAngle      = YAStartDrawingPoint;
+        piePlot.startAngle      = YALStartDrawingPoint;
         piePlot.sliceDirection  = CPTPieDirectionCounterClockwise;
         CPTMutableLineStyle *lineStyle = [CPTMutableLineStyle lineStyle];
         lineStyle.lineColor = [CPTColor whiteColor];
