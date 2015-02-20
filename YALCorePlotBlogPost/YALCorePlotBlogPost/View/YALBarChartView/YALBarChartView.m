@@ -38,7 +38,7 @@ NSUInteger const YALMultiplierToAdjustAxisYSize = 10;
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        [self commonInit];
+        [self setup];
     }
     return self;
 }
@@ -46,14 +46,14 @@ NSUInteger const YALMultiplierToAdjustAxisYSize = 10;
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        [self commonInit];
+        [self setup];
     }
     return self;
 }
 
 #pragma mark - Private
 
-- (void)commonInit {
+- (void)setup {
     //Create graph and set it as host view's graph
     self.graph = [[CPTXYGraph alloc] initWithFrame:self.bounds];
     [self setHostedGraph:self.graph];

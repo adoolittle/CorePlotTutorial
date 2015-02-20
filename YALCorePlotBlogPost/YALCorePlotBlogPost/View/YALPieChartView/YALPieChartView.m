@@ -33,7 +33,7 @@ static CGFloat const YALMinimalDegreesToDisplay = 3.f;
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        [self commonInit];
+        [self setup];
     }
     return self;
 }
@@ -41,14 +41,14 @@ static CGFloat const YALMinimalDegreesToDisplay = 3.f;
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        [self commonInit];
+        [self setup];
     }
     return self;
 }
 
 #pragma mark - Private
 
-- (void)commonInit {
+- (void)setup {
     //Create graph and set it as host view's graph
     self.graph = [[CPTXYGraph alloc] initWithFrame:self.bounds];
     

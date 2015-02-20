@@ -35,7 +35,7 @@ static CGFloat const YALDefaultDistanceBetweenBars = 10.0f;
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        [self commonInit];
+        [self setup];
     }
     return self;
 }
@@ -43,14 +43,14 @@ static CGFloat const YALDefaultDistanceBetweenBars = 10.0f;
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        [self commonInit];
+        [self setup];
     }
     return self;
 }
 
 #pragma mark - Private
 
-- (void)commonInit {
+- (void)setup {
     self.graph = [[CPTXYGraph alloc] initWithFrame:CGRectZero];
     [self setHostedGraph:self.graph];
     
