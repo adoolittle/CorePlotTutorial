@@ -1,4 +1,4 @@
-# Simple tutorial dedicated to Core Plot frameforwk 
+# Simple tutorial dedicated to Core Plot framework 
 ###Three types of charts are available: bar chart, pie chart and stacked bar chart.
 
 Made in [Yalantis](http://yalantis.com/).
